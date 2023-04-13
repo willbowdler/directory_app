@@ -15,6 +15,7 @@
 
   {{$slot}}
 
+  <script src="{{asset('js/updateSelectedUser.js')}}"></script>
 </body>
 
 </html>

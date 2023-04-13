@@ -1,12 +1,12 @@
+@props(['users'])
+
 <x-layout>
 
-  <div class="directory">
-    <x-search-members />
-    @foreach ($users as $user)
+  <div class="dashboard">
 
-    <x-user-item :user='$user' />
+    <x-directory :users='$users' />
 
-    @endforeach
+    <x-dir-user-selected />
+
   </div>
-
 </x-layout>

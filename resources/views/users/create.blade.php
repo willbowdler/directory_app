@@ -1,7 +1,9 @@
 <x-layout>
 
   <div class="cont_center">
-    <form class="register_form" action="">
+    <form class="form register_form" action="/users/create" method="POST">
+      @csrf
+
       <div class="register_inputs_container">
         <h1>Create a User</h1>
 
@@ -9,56 +11,56 @@
           <label for="name">
             Name
           </label>
-          <input type="text">
+          <input name="name" type="text">
         </div>
 
         <div class="inputs">
           <label for="email">
             Email
           </label>
-          <input type="email">
+          <input name="email" type="email">
         </div>
 
         <div class="inputs">
           <label for="password">
             Password
           </label>
-          <input type="password">
+          <input name="password" type="password">
         </div>
 
         <div class="inputs">
           <label for="phone_number">
             Phone Number
           </label>
-          <input type="text">
+          <input name="phone_number" type="text">
         </div>
 
         <div class="inputs">
           <label for="address">
             Address
           </label>
-          <input type="text">
+          <input name="address" type="text">
         </div>
 
         <div class="inputs">
-          <label for="Gender">
+          <label for="gender">
             Gender
           </label>
-          <input type="text">
+          <input name="gender" type="text">
         </div>
 
         <div class="inputs">
           <label for="marital_status">
             Marital Status
           </label>
-          <input type="text">
+          <input name="marital_status" type="text">
         </div>
 
         <div class="inputs">
           <label for="birthday">
             Birthday
           </label>
-          <input type="date">
+          <input name="birthday" type="date">
         </div>
       </div>
 

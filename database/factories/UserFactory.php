@@ -18,6 +18,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'slug' => fake()->unique()->slug(1),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone_number' => fake()->phoneNumber(),
@@ -27,7 +28,10 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             'family_id' => 1,
             'spouse' => fake()->unique()->name(),
-            'image_URL' => fake()->imageUrl()
+            'marital_status' => fake()->word(),
+            'gender' => fake()->word(),
+            'image_URL' => fake()->imageUrl(),
+            'birthday' => fake()->date()
 
         ];
     }

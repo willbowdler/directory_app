@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,21 +17,11 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
-    $users = User::orderBy('name');
+Route::get('/', [DashboardController::class, 'show']);
 
-    if (request('search')) {
-        $users->where('name', 'like', '%' . request('search') . '%');
-    }
+Route::get('/users/create', [UserController::class, 'create']);
+Route::post('/users/create', [UserController::class, 'store']);
+Route::get('/users/{user:slug}', [UserController::class, 'find_one']);
 
-    return view('directory.index', [
-        'users' => $users->get()
-    ]);
-});
-
-Route::get('/users/create', function () {
-    return view('users.create');
-});
-Route::post('/user/create', function () {
-    return view('vsd');
-});
+Route::get('sessions/create', [SessionController::class, 'create']);
+Route::post('sessions/create', [SessionController::class, 'store']);

@@ -7,7 +7,10 @@
     </ul>
   </div>
 
-  <a>
-    <img class="nav_profile" src='{{fake()->imageURL()}}' alt="">
-  </a>
+  <div>
+    <a href="\" class="Login"></a>
+    <a>
+      <img class="nav_profile" src='{{fake()->imageURL()}}' alt="">
+    </a>
+  </div>
 </nav>

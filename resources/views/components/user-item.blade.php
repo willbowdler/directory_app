@@ -1,6 +1,6 @@
 @props(['user'])
 
-<div class="dir_item">
+<div class="dir_item" data-user-slug="{{$user->slug}}">
   <div class="user_profile_poc">
     <img class="item_img" src="{{$user->image_URL}}" alt="">
   </div>
