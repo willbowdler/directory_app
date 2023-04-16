@@ -1,0 +1,108 @@
+.note_form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 35%;
+
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 12px;
+}
+
+.note_form textarea {
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    height: 100px;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+
+    border-bottom: 1px solid;
+}
+
+.note_form input {
+    background: none;
+    border: none;
+    outline: none;
+
+    font-size: 20px;
+}
+
+.note_form button {
+    width: fit-content;
+    padding: 0.4rem 2rem;
+    background-color: rgb(69, 193, 250);
+    color: #fff;
+    border: 1.5px solid rgb(69, 193, 250);
+    border-radius: 17px;
+
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.note_form button:hover {
+    color: rgb(69, 193, 250);
+    background-color: #fff;
+}
+
+.float_right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notes_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem;
+    width: 60%;
+    background-color: rgb(241, 241, 241);
+    border-left: 3px solid rgb(69, 193, 250);
+    border-radius: 0 15px 15px 0;
+
+    overflow: scroll;
+}
+
+.note_for {
+    font-size: 50px;
+}
+
+.note_info {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+.note_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note_delete {
+    border: none;
+    background-color: none;
+    font-weight: 500;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+.note_delete:hover {
+    color: rgb(122, 122, 122);
+}
+
+.go_back {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

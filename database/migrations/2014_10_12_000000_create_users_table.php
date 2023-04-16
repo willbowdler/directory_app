@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('marital_status');
             $table->date('birthday');
+            $table->boolean('isElder')->nullable();
         });
     }
 

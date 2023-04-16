@@ -1,7 +1,16 @@
 const userItemComponents = document.querySelectorAll(".dir_item");
 console.log(userItemComponents);
 
+const checkForNotesAndUpdate = (data) => {
+    if (data.hasOwnProperty("notes")) {
+        const linkToNotes = document.querySelector(".to_notes");
+        linkToNotes.setAttribute("href", `/users/${data.id}/notes/create`);
+    }
+};
+
 const updateSelectedUserUI = (data) => {
+    document.querySelector(".dir_user_selected").classList.remove("invisible");
+
     const {
         name,
         address,
@@ -10,7 +19,7 @@ const updateSelectedUserUI = (data) => {
         marital_status,
         spouse,
         birthday,
-        imageURL,
+        image_URL,
     } = data;
 
     const nameNode = document.querySelector(".selected_name");
@@ -29,7 +38,9 @@ const updateSelectedUserUI = (data) => {
     mStatusNode.textContent = marital_status;
     spouseNode.textContent = spouse;
     birthdayNode.textContent = birthday;
-    imageNode.textContent = imageURL;
+    imageNode.setAttribute("src", `${image_URL}`);
+
+    checkForNotesAndUpdate(data);
 };
 
 userItemComponents.forEach((user) => {

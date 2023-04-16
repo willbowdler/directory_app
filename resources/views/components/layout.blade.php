@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('css/auth.css')}}">
+  <link rel="stylesheet" href="{{asset('css/notes.css')}}">
   <title>Directory</title>
 </head>
 
@@ -15,7 +16,8 @@
 
   {{$slot}}
 
-  <script src="{{asset('js/updateSelectedUser.js')}}"></script>
+  <script src="{{asset('js/users/updateSelectedUser.js')}}"></script>
+
 </body>
 
 </html>

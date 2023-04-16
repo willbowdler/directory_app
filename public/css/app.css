@@ -12,6 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+img {
+    border: 0;
+    outline: none;
 }
 
 .cont_center {
@@ -19,6 +25,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 /* Nav */
@@ -30,6 +40,8 @@ nav {
     position: sticky;
     top: 0;
     padding: 1rem;
+    height: 11vh;
+    font-size: 17px;
     background-color: rgb(233, 233, 233);
     box-shadow: 0px 0px 10px rgb(186, 186, 186);
 
@@ -39,6 +51,13 @@ nav {
 .nav_first_child {
     display: flex;
     align-items: center;
+}
+
+.nav_second_child {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 1rem;
 }
 
 nav ul {
@@ -75,6 +94,7 @@ nav a:hover {
 
 .dashboard {
     display: flex;
+    height: 89vh;
 }
 
 /* Directory */
@@ -82,9 +102,10 @@ nav a:hover {
 .directory {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
     width: 50%;
+    border-right: 1px solid rgb(228, 228, 228);
+
+    overflow: scroll;
 }
 
 /* Search */
@@ -92,6 +113,7 @@ nav a:hover {
 .member_search_form {
     display: flex;
     align-items: center;
+    margin: 2rem 0 1rem 2rem;
     padding: 0.25rem 1rem;
     width: fit-content;
     border-radius: 10px;
@@ -117,7 +139,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.5rem 0;
+    padding: 1rem 2rem;
     border-bottom: 1px solid rgb(193, 193, 193);
 
     cursor: pointer;
@@ -147,10 +169,30 @@ nav a:hover {
     border-radius: 100000px;
 }
 
-/* Dashboard User */
+/* Dashboard User Selected */
 
-.dash-user_selected {
+.dir_user_selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
     width: 50%;
-    height: 100%;
+
     overflow: scroll;
+}
+
+.selected_aep {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.selected_aep div {
+    text-align: center;
+    flex: 1;
+}
+
+.selected_profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 1000000px;
 }
