@@ -28,7 +28,7 @@ class UserController extends Controller
         $data['slug'] = strtolower(str_replace(' ', '', $data['name']));
 
 
-        User::create($data);
+        $user = User::create($data);
 
         if (Auth::attempt($data)) {
             return redirect('/');

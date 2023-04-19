@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  <link rel="stylesheet" href="{{asset('css/auth.css')}}">
-  <link rel="stylesheet" href="{{asset('css/notes.css')}}">
+  <link rel="stylesheet" href="{{mix('css/all.css')}}">
+  <script src="https://js.stripe.com/v3/"></script>
+
   <title>Directory</title>
 </head>
 
@@ -16,7 +16,7 @@
 
   {{$slot}}
 
-  <script src="{{asset('js/users/updateSelectedUser.js')}}"></script>
+  <script src="{{ mix('js/app.js') }}"></script>
 
 </body>
 

@@ -4,7 +4,7 @@
     @auth
     <ul>
       <li><a href="/">Members</a></li>
-      <li><a href="/transactions/create">Give</a></li>
+      <li><a href="/payments/create">Give</a></li>
     </ul>
     @endauth
   </div>

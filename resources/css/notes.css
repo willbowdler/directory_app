@@ -96,6 +96,7 @@
     font-size: 20px;
 
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 .note_delete:hover {
     color: rgb(122, 122, 122);
@@ -103,6 +104,18 @@
 
 .go_back {
     position: fixed;
-    bottom: 0;
+    bottom: 0.5rem;
     left: 0;
+}
+
+.link {
+    color: rgb(69, 193, 250);
+    text-decoration: none;
+    padding: 0 1rem;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+.link:hover {
+    color: rgb(53, 155, 244);
 }

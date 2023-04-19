@@ -1,0 +1,41 @@
+.payment_form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 12px;
+}
+
+.currency_input {
+    width: fit-content;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 15px;
+    text-align: center;
+
+    font-size: 60px;
+}
+.currency_input::placeholder {
+    color: #000;
+}
+
+.card-element {
+}
+
+.payment_form button {
+    width: fit-content;
+    padding: 0.4rem 2rem;
+    background-color: rgb(69, 193, 250);
+    color: #fff;
+    border: 1.5px solid rgb(69, 193, 250);
+    border-radius: 17px;
+
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.payment_form button:hover {
+    color: rgb(69, 193, 250);
+    background-color: #fff;
+}

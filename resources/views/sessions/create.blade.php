@@ -5,7 +5,7 @@
       @csrf
 
       <div class="register_inputs_container">
-        <h1>Create a User</h1>
+        <h1>Login</h1>
 
 
         <div class="inputs">
