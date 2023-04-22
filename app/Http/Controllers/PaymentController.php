@@ -12,8 +12,23 @@ class PaymentController extends Controller
 {
     public function create()
     {
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        $user = Auth::user();
+        $payment_methods = $user->paymentMethods();
+        $subscriptions = $user->subscriptions;
+
+        $prices = [];
+
+        foreach ($subscriptions as $subscription) {
+            $price = \Stripe\Price::retrieve($subscription->stripe_price);
+            $prices[] = '$' . number_format($price->unit_amount, 2);
+        }
+
         return view('payments.index', [
-            "user" => Auth::user(),
+            "user" => $user,
+            "payment_methods" => $payment_methods,
+            "prices" => $prices
         ]);
     }
 
@@ -27,15 +42,17 @@ class PaymentController extends Controller
         $user = Auth::user();
         $stripeCustomer = $user->createOrGetStripeCustomer();
 
+        if ($request->payment_selection) {
+            $payment_method = $request->payment_selection;
+        } else {
+            $payment_method =  $request->paymentMethodId;
+        }
+
         $stripeCharge = $user->charge(
             $amount,
-            $request->payment_method_id
+            $payment_method
         );
 
         return back();
-    }
-
-    public function subscription(Request $request)
-    {
     }
 }

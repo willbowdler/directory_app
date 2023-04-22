@@ -5,6 +5,7 @@
     <ul>
       <li><a href="/">Members</a></li>
       <li><a href="/payments/create">Give</a></li>
+      <li><a href="/audio/show">Audio</a></li>
     </ul>
     @endauth
   </div>

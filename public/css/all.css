@@ -423,16 +423,37 @@ nav a:hover {
 .payment_form button {
     width: fit-content;
     padding: 0.4rem 2rem;
-    background-color: rgb(69, 193, 250);
-    color: #fff;
-    border: 1.5px solid rgb(69, 193, 250);
     border-radius: 17px;
 
     transition: all 0.5s ease;
     cursor: pointer;
 }
 
-.payment_form button:hover {
+.payment_once_button {
+    background-color: rgb(69, 193, 250);
+    color: #fff;
+    border: 1.5px solid rgb(69, 193, 250);
+}
+.payment_once_button:hover {
     color: rgb(69, 193, 250);
     background-color: #fff;
+}
+
+.subscription_button {
+    color: rgb(0, 118, 235);
+    background-color: #fff;
+    border: 1.5px solid rgb(0, 118, 235);
+}
+.subscription_button:hover {
+    color: #fff;
+    background-color: rgb(0, 118, 235);
+}
+
+.payment_btn_cont {
+    gap: 0.75rem;
+}
+
+.payment_methods {
+    display: flex;
+    flex-direction: column;
 }
